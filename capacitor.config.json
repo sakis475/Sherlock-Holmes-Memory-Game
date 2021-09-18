@@ -1,0 +1,6 @@
+{
+  "appId": "mem.game.sherlockHolmes",
+  "appName": "memGame",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}

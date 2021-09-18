@@ -1,0 +1,7 @@
+{
+  "name": "memGame",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

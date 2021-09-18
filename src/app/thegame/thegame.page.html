@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>level: {{(level + 1) >= 7?'last level':(level + 1)}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-game-logic
+    (levelFinished)="changeLevel($event)"
+    [memoryBoxesSize]="memoryBoxesSizeOfLevel"
+  ></app-game-logic>
+  <div class="winning-message" id="winningMessage" *ngIf="showScore">
+    <ion-text>Score: {{score}}</ion-text>
+    <ion-text>time remaining: {{totalTimeRemaining}} secs</ion-text>
+    <ion-text>total flips: {{totalFlips}}</ion-text>
+    <ion-button
+      color="light"
+      shape="round"
+      id="restartButton"
+      (click)="onClick()"
+      >Next Level</ion-button
+    >
+  </div>
+
+  <div class="winning-message" id="gameFinishedMessage" *ngIf="gameFinished">
+    <ion-text>Congratulation, you finished!!!</ion-text>
+    <ion-text>Final Score: {{endGameScore}}</ion-text>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title [innerHTML]="countdownTimer"></ion-title>
+  </ion-toolbar>
+</ion-footer>
