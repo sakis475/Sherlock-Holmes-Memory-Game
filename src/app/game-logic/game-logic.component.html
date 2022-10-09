@@ -11,7 +11,7 @@
             cell.reveal ? 'is-flipped' : ''
           ]"
         >
-          <div id="showID">{{ cell.image }}</div>
+          <!-- <div id="showID">{{ cell.image }}</div> -->
           <div class="card__face card__face--back">
             <img
               src="../assets/shelock-holmes-icons/{{
@@ -21,12 +21,12 @@
           </div>
 
           <div class="card__face card__face--front">
-            <!-- <img src="../assets/shelock-holmes-icons/back.png" /> -->
-            <img
+            <img src="../assets/shelock-holmes-icons/back.png" />
+            <!-- <img
               src="../assets/shelock-holmes-icons/{{
                 cell.image[0] == '_' ? cell.image.slice(1) : cell.image
               }}.png"
-            />
+            /> -->
           </div>
         </div>
       </div>
